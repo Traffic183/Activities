@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lottery Generator</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="jumbotron">
+
+    <h1 class="text-center">Generate Lottery Numbers!</h1>
+
+    <div class="text-center">
+
+      <!-- Here we have our button with id random-button -->
+      <button id="random-button" class="btn btn-primary btn-lg"><h1>?</h1></button>
+
+    </div>
+
+  </div>
+
+  <!-- Here we have div called "random-number" where our random number will go -->
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      $(".jumbotron").on("click", "#random-button", function() {
+
+        var lottoNum = "";
+
+        for (var i = 0; i < 9; i++) {
+
+        var random = Math.floor(Math.random() * 9) + 1;
+
+        lottoNum = random + lottoNum;
+        }
+
+        $("#random-number").prepend("<br><hr>" + lottoNum);
+
+        });
+      });
+
+     
+        // Create a string which will hold the lottery number
+        
+        // Then initiate a loop to generate 9 separate numbers
+        
+          // For each iteration, generate a new random number between 1 and 9.
+          
+          // Take this number and then add it to the rest of the string.
+          // In essence, we are iteratively building a string of numbers. (e.g. First: 1, Second: 13, Third: 135, etc.)
+          
+      
+
+        // ... and then dump the random number into our random-number div.
+      
+
+  </script>
+
+// Using the code from the previous random number generator as a starting point, create a lottery generator.
+
+// * In our case, the lottery number should pick a random 9 digit number (and always 9 digits). As an example: 886563264.
+
+// * Display this number in the random-number div.
+
+// * Then when a user clicks again, have the code create a new row with the latest number at the top.
+
+
+</body>
+</html>

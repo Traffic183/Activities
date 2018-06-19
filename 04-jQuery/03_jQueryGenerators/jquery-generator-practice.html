@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery Dump</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+      .fancy {
+        font-size: 100px;
+        color: purple;
+      }
+    </style>
+</head>
+<body>
+
+  <!-- Created an empty HTML div. Note that there is no content -->
+  <div id="empty-div"></div>
+
+
+  <script type="text/javascript">
+
+    // Thanks to jQuery's handy $ selector ... we have a wealth of new methods for selecting and manipulating HTML.
+
+    // Here we are using jQuery's .HTML method to instantly select and change the contents of our empty-div.
+  $("#empty-div").html("<h1>Hello World!</h1>");
+
+    // We can just as easily append a new line using a similarly simple .append method.
+    //$("#empty-div").append("<p>A pleasure to meet you!</p>");
+  //$("#empty-div").append("Pleasure to meet you!");
+
+    // If we needed each line to be its own div, we could just as easily create a new div
+    
+    var newDiv = $("<div>");
+    newDiv.text("A pleasure to meet you!");
+
+    $("#empty-div").append(newDiv);
+
+    $("#empty-div").attr("class", "fancy");
+
+  // jQuery alternative to: var newDiv = document.createElement("div");
+ // var newDiv = $("<div>");
+
+// jQuery alternative to: newDiv.textContent = "A pleasure to meet you!";
+//newDiv.text("A pleasure to meet you!");
+ // We can then  append it to the other div using the same ".append" method.
+//$("empty-div").append(newDiv);
+
+// jQuery alternative to: var newDiv = document.createElement("div");
+
+//var newDiv = $("<div>");
+
+// jQuery alternative to: newDiv.textContent = "A pleasure to meet you!";
+
+//$(newDiv).text("<p>A pleasure to meet you.<p>");
+
+// jQuery alternative to: document.querySelector("#empty-div").appendChild(newDiv);
+
+//$("empty-div").append(newDiv);
+
+// If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
+
+//$(newDiv).attr("class", "fancy");
+
+
+  </script>
+
+
+
+</body>
+</html>
